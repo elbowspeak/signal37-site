@@ -4,10 +4,6 @@ date: 2026-02-19
 summary: "How AI collaboration closes the execution gap for individuals and teams"
 ---
 
-# Intelligence Isn't the Constraint
-
-*How AI collaboration closes the execution gap for individuals and teams*
-
 **tl;dr:** I have ADHD. AI collaboration eliminated the grind between having ideas and producing finished work. The same dynamic applies to organizations: the constraint is rarely intelligence, it's the bandwidth between insight and action. AI adds a delegation layer that compresses that gap, freeing the thinking that was already there to operate at its actual level.
 
 ---
