@@ -20,7 +20,9 @@ And when the bottleneck got too frustrating, I'd do what every ADHD brain does. 
 
 Working with Claude (conversational AI and Claude Code together) collapsed the distance between conception and artifact in a way that fundamentally changed what my brain can do. It eliminated the part of the process my brain couldn't do: the sustained, linear, low-novelty grind of getting from "I see this clearly" to "here it is on a page, organized and complete." That middle section became a conversation instead of a slog. The bottleneck moved from the thing I'm worst at to the thing I'm best at: rapid ideation, pattern recognition, judgment, refinement.
 
-I've written more in the last six months than in the previous several years combined. I've built working applications despite not being a developer. I've turned intuitions that had been sitting inert for years into frameworks that clients actually use. None of it is Claude's thinking. It's mine. But it wouldn't exist without a collaboration layer that converts the way my brain actually works into finished artifacts.
+I've written more in the last six months than in the previous several years combined. But writing is the least of it. I've built working applications, including this publishing platform and an autonomous intelligence system called Kayt. I've built AI integrations for clients that replaced months of manual work. I've developed strategic frameworks that existed as intuitions for years and now exist as tools my consulting clients actually use. I volunteer for a digitization and archiving project that would have taken a team of researchers months; we're doing it in weeks. None of this is work I could have done before, because the execution cost of each project would have exceeded my available bandwidth. The ideas were there. The capacity to act on them wasn't.
+
+None of it is Claude's thinking. It's mine. But it wouldn't exist without a collaboration layer that converts the way my brain actually works into finished artifacts.
 
 ## The organizational version of this problem
 
