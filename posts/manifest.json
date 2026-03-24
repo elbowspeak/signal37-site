@@ -1,5 +1,11 @@
 [
   {
+    "slug": "disciplined-ai-integration",
+    "title": "The Disciplined Approach to AI Integration for Non-Coding Roles",
+    "date": "2026-03-24",
+    "summary": "Most AI integration advice assumes you're a developer. The interesting problems live in the gap between what an organization knows it should be doing and what it actually does every day."
+  },
+  {
     "slug": "why-coordination-fails",
     "title": "Why Coordination Fails Among People Who Agree",
     "date": "2026-02-20",
