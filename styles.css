@@ -1,0 +1,321 @@
+/* Signal 37 — site styles.
+   Tokens from signal37-design/public/tokens.css (generated from DESIGN.md v1.0-draft, 2026-07-05).
+   Theme policy: light-primary, always. No prefers-color-scheme auto-switch (ruled 2026-07-05).
+   Display type: Instrument Serif + 12% optical widening via scaleX (O2 FINAL 2026-07-05). */
+
+:root {
+  --canvas: #FBFBF8;
+  --canvas-alt: #FFFFFF;
+  --void: #0D0F0E;
+  --ink: #0B0D0C;
+  --ink-mid: #434745;
+  --ink-faint: #8C908E;
+  --accent: #00A36C;
+  --accent-bright: #2FA483;
+  --accent-deep: #007A50;
+  --escalation: #E8590C;
+  --escalation-bg: rgba(232, 89, 12, 0.09);
+  --border: #E2E0DA;
+  --border-strong: #C9C7C0;
+  --line: rgba(0, 163, 108, 0.28);
+  --line-peak: rgba(0, 163, 108, 0.75);
+  --display-stretch: 1.12;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --shadow-sm: 0 1px 2px rgba(17, 19, 18, 0.06);
+  --shadow-md: 0 2px 8px rgba(17, 19, 18, 0.08);
+  --sp-xs: 4px;
+  --sp-sm: 8px;
+  --sp-md: 16px;
+  --sp-lg: 24px;
+  --sp-xl: 40px;
+  --sp-2xl: 64px;
+  --sp-3xl: 96px;
+  --sp-4xl: 128px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scrollbar-gutter: stable;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--canvas);
+  color: var(--ink);
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ---------- Display type: Instrument Serif with the 12% optical widening.
+   scaleX + transform-origin left top + width compensation so the widened
+   text still fits its column. Left-aligned by design (origin is left). ---------- */
+.display, h1, h2 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-weight: 400;
+  transform: scaleX(var(--display-stretch));
+  transform-origin: left top;
+  width: calc(100% / var(--display-stretch));
+}
+
+h1, .display {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.display em, h1 em, h2 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+p { color: var(--ink-mid); }
+p.lead {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+strong { color: var(--ink); font-weight: 600; }
+
+a { color: inherit; text-decoration: none; }
+main a, footer a {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s linear;
+}
+main a:hover, footer a:hover { text-decoration-color: var(--accent-deep); }
+
+code, pre, .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+img { max-width: 100%; display: block; }
+
+/* ---------- Layout ---------- */
+.wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 var(--sp-lg);
+}
+
+section { margin-bottom: var(--sp-3xl); }
+
+/* ---------- Nav ---------- */
+header.site {
+  border-bottom: 1px solid var(--border);
+  background: var(--canvas);
+}
+nav.site {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: var(--sp-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--sp-lg);
+}
+.wordmark {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1.375rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  display: inline-block;
+  transform: scaleX(var(--display-stretch));
+  transform-origin: left center;
+  white-space: nowrap;
+}
+.nav-links { display: flex; gap: var(--sp-lg); flex-wrap: wrap; }
+.nav-links a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--ink-mid);
+  transition: color 0.15s linear;
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-links a.active { color: var(--accent-deep); }
+
+/* ---------- Section label ---------- */
+.section-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  display: block;
+  margin-bottom: var(--sp-md);
+}
+
+/* ---------- Hero ---------- */
+.hero { padding: var(--sp-3xl) 0 var(--sp-2xl); }
+.hero .kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent-deep);
+  margin-bottom: var(--sp-lg);
+}
+.hero p.lead { margin-top: var(--sp-lg); max-width: 640px; }
+
+/* ---------- Signal separator (the motif) ---------- */
+.signal-sep {
+  display: block;
+  width: 100%;
+  height: 48px;
+  margin: var(--sp-2xl) 0;
+}
+
+/* ---------- Phase rows (mono labels) ---------- */
+.phase-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--sp-lg);
+  padding: var(--sp-lg) 0;
+  border-top: 1px solid var(--border);
+}
+.phase-row:last-of-type { border-bottom: 1px solid var(--border); }
+.phase-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  line-height: 1.6;
+}
+.phase-row p { font-size: 0.9375rem; }
+
+/* ---------- Proof blocks ---------- */
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--sp-lg);
+  margin-top: var(--sp-lg);
+}
+.proof-block {
+  background: var(--canvas-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-lg);
+  box-shadow: var(--shadow-sm);
+}
+.proof-block h3 { margin-bottom: var(--sp-sm); }
+.proof-block p { font-size: 0.875rem; line-height: 1.65; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  transition: background-color 0.15s linear, color 0.15s linear, border-color 0.15s linear;
+}
+.btn-primary {
+  background: var(--accent-deep);
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.btn-primary:hover { background: var(--accent); }
+main a.btn-primary { color: #FFFFFF; text-decoration: none; }
+.btn-secondary {
+  border: 1px solid var(--border-strong);
+  color: var(--ink);
+  text-decoration: none;
+}
+.btn-secondary:hover { border-color: var(--ink-mid); }
+main a.btn-secondary { color: var(--ink); text-decoration: none; }
+
+/* ---------- Quote / lore ---------- */
+blockquote.lore {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--ink);
+  border-left: 2px solid var(--accent);
+  padding-left: var(--sp-lg);
+  margin: var(--sp-xl) 0;
+  max-width: 620px;
+}
+
+/* ---------- Placeholder marker (review builds only) ---------- */
+.placeholder {
+  background: var(--escalation-bg);
+  border: 1px dashed var(--escalation);
+  border-radius: var(--radius-md);
+  color: var(--escalation);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8125rem;
+  padding: var(--sp-sm) var(--sp-md);
+  display: inline-block;
+  margin: var(--sp-sm) 0;
+}
+
+/* ---------- Prose spacing ---------- */
+.prose > * + * { margin-top: var(--sp-md); }
+.prose h2 { margin-top: var(--sp-2xl); }
+.prose h3 { margin-top: var(--sp-xl); }
+.prose ul, .prose ol { padding-left: 1.25rem; color: var(--ink-mid); }
+.prose li + li { margin-top: var(--sp-sm); }
+
+/* ---------- Footer ---------- */
+footer.site {
+  border-top: 1px solid var(--border);
+  margin-top: var(--sp-3xl);
+  padding: var(--sp-xl) 0 var(--sp-2xl);
+}
+footer.site .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--sp-lg);
+  flex-wrap: wrap;
+}
+footer.site p, footer.site a {
+  font-size: 0.8125rem;
+  color: var(--ink-faint);
+}
+footer.site .foot-links { display: flex; gap: var(--sp-md); }
+footer.site .foot-links a { text-decoration: none; color: var(--ink-mid); }
+footer.site .foot-links a:hover { color: var(--ink); }
+
+/* ---------- Small screens ---------- */
+@media (max-width: 640px) {
+  .phase-row { grid-template-columns: 1fr; gap: var(--sp-sm); }
+  .hero { padding-top: var(--sp-2xl); }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
