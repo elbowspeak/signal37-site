@@ -561,3 +561,6 @@ main.wrap > *:nth-child(n+6) { animation-delay: 0.45s; }
     transition-duration: 0.01ms !important;
   }
 }
+
+/* team roles (2026-07-09) */
+.panel-role { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-deep); margin: 2px 0 8px; }
