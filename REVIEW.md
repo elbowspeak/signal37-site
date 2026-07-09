@@ -35,7 +35,7 @@ Old pages `work.html`, `insight.html`, `post.html`, `posts/` were left untouched
 - **Theme**: light-primary only. No `prefers-color-scheme` anywhere; no dark opt-in included.
 - **Accent discipline**: `--accent-deep` (#007A50) for body-size links/labels (AA); `--accent` (#00A36C) only for large display italics and the signal-motif peak. At most one accent phrase per heading.
 - **Signal motif**: second pass replaced the first-pass spike separators with the canonical constructions from `signal37-design/dist/signal` and `dist/components`: three layers (tick field at 0.18–0.2 opacity, measured waveform line, one peak dot with bell-curve rise), hero motif at 0.55 wrapper opacity behind the index hero, compact 80×24 separator at section transitions, one peak per instance everywhere. O3 (spike vs bell) follows the components-page demo hero: bell. The 404 carries a deliberately peakless, attenuated line ("no signal").
-- **Escalation orange**: rationed to one element per view — on `approach.html` it is the dashed "rebuild the model" path in the loop diagram; the visible `[PLACEHOLDER]` chip on `about.html` is a review artifact. `platform.html` uses the separate muted RAG status layer (mockup tokens: `--good`/`--warn`) for status pills and the hot path, keeping true escalation amber unused there.
+- **Escalation orange**: rationed to one element per view — on `approach.html` it is the dashed "rebuild the model" path in the loop diagram. `platform.html` uses the separate muted RAG status layer (mockup tokens: `--good`/`--warn`) for status pills and the hot path, keeping true escalation amber unused there.
 - **Diagram text**: Inter for node/description text, JetBrains Mono for labels/captions, per the graphics standard.
 
 ## Copy claims and sources
@@ -91,6 +91,7 @@ Primary sources: `S37 Positioning & Messaging v7.md` (v7, 2026-07-08 — current
 | Commitments list (teachers first / you own everything / open playbook / principals / receipts) | v7 Pillars 2–4 + carried "You own everything we build for you" [locked] — all stated as S37 commitments (active framing) |
 | IP posture (method is S37's IP, encoded skills are the client's) | v7 "S37 Protocols" / v2-clean IP Posture |
 | Joshua bio line: "Co-Founder, WonderTwin (acquired by LocalStack, 2026)" | Approved phrasing per brief + `~/.claude/projects/-Users-elbowspeak/memory/joshua_bio_facts.md` (verified 2026-04-23, acquisition phrasing approved 2026-07-09). "Scientific Advisory Board, Active Inference Institute" also verified there. Kept to one line; method leads, per brief. |
+| Team section: both partners named, joint framing ("50-plus years between two partners…", "Design thinking meets complexity theory; product strategy meets causal modeling", convergence line), LinkedIn links verbatim (`linkedin.com/in/joshuashane`, `linkedin.com/in/j-scott-king-9991a4/`), "J. Scott King" styling | Joshua directive 2026-07-09; precedent and substance = live site `main:approach.html` team section, adapted to the new voice (em dash and "don't come from X, they come from Y" construction removed). Scott carries "Partner." only; no individual specialty attribution was in the source, so none was invented. |
 
 ### contact.html
 | Claim / copy | Source |
@@ -150,7 +151,7 @@ All diagrams: `viewBox`-scaled (read at 1400, shrink losslessly at 390 — struc
 
 ## Placeholders (visible on-page, escalation-orange chips)
 
-1. `about.html` — `[PLACEHOLDER: full team roster — confirm whether partners are named publicly and with what titles]`. v7 lists Scott King as partner/collaborator; whether that is public was not confirmable from the sources.
+None remaining. The one placeholder from the first pass (`about.html` team roster) is **resolved** per Joshua's 2026-07-09 directive: partners are named publicly, precedent = the live site's team section (`main:approach.html`); both partners now appear with LinkedIn links.
 
 Not placeholdered but flagged for Joshua (open decisions):
 - **"Ships with every engagement"** (platform + index): forward commitment vs the realignment plan's dogfood gate — confirm or soften (see platform table).

@@ -354,6 +354,15 @@ nav.site {
 .door h3 { margin-bottom: var(--sp-xs); }
 .door p { font-size: 0.9rem; line-height: 1.6; }
 
+/* ---------- Team links ---------- */
+.team-link {
+  display: inline-block;
+  margin-top: var(--sp-sm);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
 /* ---------- Callout (termnote treatment) ---------- */
 .callout {
   border: 1px solid var(--border);
