@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Signal 37 favicon (2026-07-09): "S37" wordmark tile, per Joshua's redirect.
+       Cream rounded tile (radius 7/32), serif S37, the 37 in accent verdigris,
+       display-stretch carried as scale(1.12 1). The rendered PNGs use Instrument Serif;
+       this SVG falls back to system serif because SVG favicons cannot load webfonts. -->
+  <rect x="0.5" y="0.5" width="31" height="31" rx="7" fill="#FBFBF8" stroke="#E2E0DA" stroke-width="1"/>
+  <g transform="translate(16 22.5) scale(1.12 1)">
+    <text x="0" y="0" text-anchor="middle" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif" font-size="18" letter-spacing="-0.3" fill="#0B0D0C">S<tspan fill="#00A36C">37</tspan></text>
+  </g>
+</svg>

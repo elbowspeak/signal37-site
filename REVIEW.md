@@ -1,18 +1,29 @@
 # Signal 37 site rebuild — review notes
 
-Branch: `signal37-rebuild-2026-07-09` · Built 2026-07-09 · FOR REVIEW ONLY — not deployed, not pushed. `main` and `CNAME` untouched.
+Branch: `signal37-rebuild-2026-07-09` · Built 2026-07-09, second pass same day · FOR REVIEW ONLY — not deployed, not pushed. `main` and `CNAME` untouched.
 
 ## What was built
 
 | File | Purpose |
 |---|---|
-| `styles.css` | Shared stylesheet. Tokens copied verbatim from `signal37-design/public/tokens.css` (generated from `DESIGN.md` v1.0-draft). |
-| `index.html` | Home: hero, problem narrative, engagement arc, proof points, ICP, lore line, CTA. |
-| `approach.html` | The engagement model in full: three phases, the calibration discipline, open playbook, the ERP/SI buyer question. |
-| `about.html` | The Move 37 origin, what we sell, commitments, minimal team section. |
-| `contact.html` | Two doors framing + the existing live Formspree form (endpoint carried over from the old site) + direct email. |
-| `404.html` | Minimal, on-system. Uses absolute `/styles.css` because GitHub Pages serves 404 at arbitrary nested paths. |
-| `review-shots/` | Full-page screenshots of every page, visually verified. |
+| `styles.css` | Shared stylesheet. Tokens copied verbatim from `signal37-design/public/tokens.css` (generated from `DESIGN.md` v1.0-draft). Second pass added the mockup component layer (chips, panels, loop strip, door cards, callout, footstrip, dark CTA, RAG status tokens), sticky blur nav, diagram figure styles, and one orchestrated page-load stagger. |
+| `index.html` | Home: motif hero (new headline per Joshua 2026-07-09), problem/pillar section with cognitive-infrastructure cards, engagement arc (phase rows + loop diagram), Intelligence OS teaser, proof grid, door cards, lore line, dark CTA. |
+| `approach.html` | The engagement model in full: three phases (with front-end panels, review-agenda footstrip, workflow-loop diagram), the calibration discipline (three panels), open playbook (split diagram), the ERP buyer question (with expiry callout), dark CTA. |
+| `platform.html` | **NEW — Intelligence OS product page.** The engagement instrument: model-structure diagram, operating-rhythm loop strip, evidence discipline, calibration, two-planes ownership diagram, dark CTA. In nav on every page as "Intelligence OS". |
+| `about.html` | The Move 37 origin, the offer (two panels), commitments (five panels), minimal team section, dark CTA. |
+| `contact.html` | Two door cards + the existing live Formspree form (endpoint carried over from the old site) + direct email. |
+| `404.html` | Minimal, on-system. "No signal" attenuated motif (deliberately peakless — the one sanctioned degraded state). Absolute paths because GitHub Pages serves 404 at arbitrary nested paths. |
+| `favicon.svg` + `favicon.ico` + PNGs | **REPLACED** per Joshua's redirect: "S37" wordmark tile (cream #FBFBF8 rounded 7/32, Instrument Serif, "37" in accent, 1.12 stretch). PNGs rendered from a 512px HTML tile via headless Brave with the real webfont, sips-scaled to 180/32/16; `.ico` rebuilt (48/32/16) via ImageMagick; `favicon.svg` kept as fallback with system-serif fallback stack. Small sizes visually verified legible. Prior spike-from-noise draft icon discarded (metaphor belongs to the site look, not the icon). |
+| `review-shots/` | Screenshots of every page at 1400×2400 (spec), full-page height, and true 390 px mobile (via iframe wrapper — headless Brave clamps windows at 500 px), all visually verified. |
+
+## Second pass — before/after per page (quality bar: the Intelligence OS client mockups)
+
+- **All pages**: sticky backdrop-blur nav with italic wordmark (components-page treatment); section labels in accent-deep; full-width tick-spike separators replaced with the canonical compact 80×24 separator from the Signal page; one staggered page-load reveal (`main.wrap > *`, 0.55 s rise, delays 0.05–0.45 s, killed under `prefers-reduced-motion`); dark contained CTA close per components page.
+- **index**: was hero + five prose sections. Now: approved hero-motif SVG behind the hero (exact construction from `dist/components`), metachip row, cognitive-infrastructure 3-panel row, engagement-arc loop diagram, Intelligence OS teaser section with chips, 2×2 proof grid, ICP door cards, dark CTA.
+- **approach**: was seven prose walls. Now: phase chips in hero, front-end 2-panel row, workflow-loop diagram, review-agenda footstrip, discipline 3-panel row, playbook split diagram, expiry callout, Intelligence OS cross-link, dark CTA.
+- **platform**: new page, built directly against the mockup's masthead/loop/panel/plane patterns.
+- **about**: was list-heavy prose. Now: offer 2-panel row, commitments as five titled panels, dark CTA.
+- **contact**: doors became cards; hero got chips. Form unchanged (live endpoint).
 
 Old pages `work.html`, `insight.html`, `post.html`, `posts/` were left untouched on this branch (out of scope per brief). Note: the new nav does not link to them; if this rebuild ships, decide whether they are retired or re-skinned.
 
@@ -23,8 +34,9 @@ Old pages `work.html`, `insight.html`, `post.html`, `posts/` were left untouched
 - **Body**: Inter.
 - **Theme**: light-primary only. No `prefers-color-scheme` anywhere; no dark opt-in included.
 - **Accent discipline**: `--accent-deep` (#007A50) for body-size links/labels (AA); `--accent` (#00A36C) only for large display italics and the signal-motif peak. At most one accent phrase per heading.
-- **Signal motif**: field of faint tick marks + one spike peak (O3 is an open decision, spike vs bell — spike chosen here; swap the peak path if the bell wins).
-- **Escalation orange**: used only for the visible `[PLACEHOLDER]` chips (review artifact, not brand usage).
+- **Signal motif**: second pass replaced the first-pass spike separators with the canonical constructions from `signal37-design/dist/signal` and `dist/components`: three layers (tick field at 0.18–0.2 opacity, measured waveform line, one peak dot with bell-curve rise), hero motif at 0.55 wrapper opacity behind the index hero, compact 80×24 separator at section transitions, one peak per instance everywhere. O3 (spike vs bell) follows the components-page demo hero: bell. The 404 carries a deliberately peakless, attenuated line ("no signal").
+- **Escalation orange**: rationed to one element per view — on `approach.html` it is the dashed "rebuild the model" path in the loop diagram; the visible `[PLACEHOLDER]` chip on `about.html` is a review artifact. `platform.html` uses the separate muted RAG status layer (mockup tokens: `--good`/`--warn`) for status pills and the hot path, keeping true escalation amber unused there.
+- **Diagram text**: Inter for node/description text, JetBrains Mono for labels/captions, per the graphics standard.
 
 ## Copy claims and sources
 
@@ -34,7 +46,9 @@ Primary sources: `S37 Positioning & Messaging v7.md` (v7, 2026-07-08 — current
 | Claim / copy | Source |
 |---|---|
 | "Find the signal. Make the move." (kicker) | v7 Pillar 5 key phrase [carried]; v2-clean |
-| "The layer above the LLM" (H1) | v7 Pillar 1 key phrase |
+| "Faster to the goal. Sure of the move." (H1) | Joshua hero direction, 2026-07-09: "infrastructure + skills to accelerate goal achievement, while ensuring the decisions you act on are right." Runner-up renderings preserved for quick swap: "Accelerate what you build. Trust what you decide." / "The speed to reach your goals. The calibration to trust your moves." |
+| "The layer above the LLM" (now the problem-section H2) | v7 Pillar 1 key phrase — demoted from hero to the pillar argument per Joshua 2026-07-09, not discarded |
+| Hero + instrument metachips ("We are done when you are capable", "Infrastructure plan & spec", "Mental-model transfer", "The playbook is open", "View-first", "Client-owned", "Priced up front"…) | All are v7 pillar key phrases / How-We-Engage phrases already sourced in these tables, or Intelligence OS realignment vocabulary (see platform table) |
 | One-line positioning ("We build the infrastructure plan and spec…") | v7, locked — Joshua 2026-07-05 |
 | "A tool nobody understands just sits there" + core narrative paragraphs | v7 "Core Narrative: Above the LLM" [locked — Summary_7/3]; v2-clean "What We Do" |
 | "not change management in the HR sense… cognitive infrastructure" | v7 core narrative [carried v6.1] |
@@ -85,15 +99,52 @@ Primary sources: `S37 Positioning & Messaging v7.md` (v7, 2026-07-08 — current
 | Two doors (stuck deployment / blank page) | v7 / v2-clean ICP section |
 | Formspree endpoint `xgolykdg` + joshua@s37.ai | Existing site `contact.html` (live infrastructure, carried over) |
 
+### platform.html (Intelligence OS)
+
+Primary sources: `Intelligence-OS-Engagement-Instrument-Realignment.md` (2026-07-05, current — "**realignment**" below), the approved client mockups `Intelligence-OS-Client-Mockups-2026-07-05.html` ("**mockups**"), and `Intelligence-OS-Positioning-Messaging.md` (2026-01-14 — used only for its Language-to-Avoid rules; its SaaS-era positioning is superseded by the realignment).
+
+| Claim / copy | Source |
+|---|---|
+| "The engagement, made visible" (H1) | mockups masthead, near-verbatim |
+| Hero dek (living model of your AI integration; assumptions / infrastructure / outcomes; every belief traceable; calibration score; "the watching is the teaching") | mockups dek + realignment ("The client learns … by watching their own engagement run through the loop"), em dashes removed per voice |
+| "Ships with every engagement" (chip + copy, also on index) | Realignment intent ("It is the engagement surface … the operational counterpart to the Claude Integration offering") + todo framing "S37 engagement instrument". **Flag for Joshua:** this is a forward commitment — the realignment plan gates first client use behind Phase 4 dogfood (4 internal weekly cycles). Confirm the tense is sellable-as-stated or soften to "engagements ship with…" once dogfooded. |
+| View-first / read-only during engagement; S37 maintains the model | Realignment "clients are view-only to begin" (Joshua's direction, 2026-07-05) |
+| Client-owned instance, deployed into client accounts/keys, stays after engagement | Realignment Phase 2 (client's Supabase/hosting/compute/key) + mockups architecture section |
+| Assumptions carry beliefs + confidence bands; workstreams carry status (not started / in progress / at risk / done); outcomes anchored to target value, resolution date, named data source | Realignment DAG-layer table (migration-013 schema) + mockups mockup-02 notes |
+| Beliefs move only on cited findings; provenance to the text; evidence tiered, behavioral outweighs reported | Mockups mockup-03 ("beliefs move only when a cited finding moves them"; tier-1 behavioral vs tier-3 reported) + realignment Phase 3 (synthesis artifacts map onto belief provenance) |
+| Weekly review: believed / happened / learned / attention next; agenda drafts from what moved | Mockups mockup-04 + realignment ("The weekly review on this surface **is** the mental-model transfer") |
+| Calibration score as the engagement's headline number, shared | Mockups note 1 ("It's the KPI for judgment, and it's shared: ours and theirs"), reworded |
+| Two planes; "one auditable door in"; capture→transcript→cited finding→belief update | Mockups architecture section (single import endpoint, service-token auth), abstracted for buyers |
+| "Signal 37 specs it. You own it. The model, and the habit of using it, stays when we leave." (figcaption) | Mockups boundary-note, carried near-verbatim (em dash removed) |
+| Vocabulary discipline: no "active inference", no "Bayesian", no "VFE", no fabricated client/data | Positioning doc "Language to Avoid" + realignment ("The theory is implementation, not pitch"). "Brier" also left off as jargon. Both diagrams are generic schematics, captioned "Illustrative structure … no client data"; nothing from the fictional Meridian Industrial demo was carried. |
+
 ### 404.html
 No substantive claims.
+
+## Graphics inventory (all hand-authored inline SVG, motif construction rules from `dist/signal`)
+
+| # | Page · section | What it shows | Notes |
+|---|---|---|---|
+| 1 | `index` hero | The approved hero motif: tick field, waveform resolving into one verdigris bell peak with dot | Exact SVG construction from `dist/components` demo hero; 0.55 wrapper opacity, absolute at hero bottom, behind copy |
+| 2 | `index` · How we engage | **The engagement arc as a loop**: 01 Build batch → 02 Hand over the loop → 03 Stay calibrated → (accent return arrow "large surprise reopens the build"), with **the calibration ledger at the center** (mini canonical motif + "expected · actual · scored"); dashed spokes = every phase writes to the ledger | Answers the brief's "three-phase arc as a loop diagram with the calibration ledger at its center" |
+| 3 | `approach` · Hand over the loop | **Sense → Model → Act → Verify → Update** workflow loop; accent path "small error · re-weight" (Update→Sense), dashed escalation path "large or persistent error · rebuild the model" (Update→Model) | The page's single amber element |
+| 4 | `approach` · Open playbook | **The open playbook / running instance split**: dashed open panel (method, references, reading list, infrastructure spec) → accent-bordered owned panel (sculpted skills, your scored predictions, calibration history, your keys/data) | |
+| 5 | `platform` · The model, drawn | **Engagement model structure**: assumptions (belief + confidence-band glyphs) → workstreams (status pills) → outcomes (target · date · data source); one warn-flagged wide-band assumption with its uncertainty path propagating to the outcome | Generic schematic, explicitly captioned as illustrative; RAG layer (good/warn), no escalation amber |
+| 6 | `platform` · Ownership | **Two planes, one loop**: dashed S37 plane (capture → transcript → cited finding → belief update) crossing "one auditable door in" down to the accent-bordered client plane (viewer, model store, inference service, your AI workspace) with the return path "open questions shape the next capture" | |
+| — | all pages | Compact 80×24 signal separators at section transitions; 404 carries the peakless "no signal" variant | Canonical separator form |
+
+All diagrams: `viewBox`-scaled (read at 1400, shrink losslessly at 390 — structure stays legible, figcaptions carry the content at phone sizes), `role="img"` + `<title>` for accessibility, JetBrains Mono labels / Inter text, colors via CSS tokens only.
+
+## Register sweep (buyer-facing firewall)
+
+`grep -rniE "sell|moat|ICP|GTM|pipeline"` across all HTML/CSS/SVG: **clean** (the pre-existing "quantitative pipelines" on approach.html was reworded to "quantitative modeling"). Remaining hits live only in `posts/*.md` — legacy blog-essay sources from the old site, not linked from the new nav and explicitly out of scope; fold into the retire-or-reskin decision below. No fabricated clients, metrics, or testimonials anywhere on the new pages; the only client-shaped visuals are captioned generic schematics.
 
 ## Acceptance checks
 
 1. **Every substantive claim lists its source** — see tables above. Nothing asserted beyond the source docs; no clients, metrics, or testimonials invented. The only numbers on the site (months→hours, two people / three months, 13 models) are the sources' own specificity.
 2. **Zero absence-framing in differentiation copy** — audited. All differentiation is stated as what S37 does ("You get the principals", "You keep everything", "The playbook is open"). The v7/v2 competitive tables (junior armies, PDFs on shelves, "they keep the model") were deliberately NOT carried onto the site. No "no one else"/"others can't" constructions anywhere.
 3. **Display stretch on every page** — h1/h2/wordmark all carry scaleX(1.12) + left-top origin + width compensation via shared `styles.css`; verified visually in every screenshot (wide-set serif headings).
-4. **All pages screenshot-verified** — `review-shots/*.png`, taken headless at 1400×2400 and inspected. Notes under each below if any.
+4. **All pages screenshot-verified** — `review-shots/*-1400.png` (spec 1400×2400), `review-shots/*-full.png` (full page height), `review-shots/{index,approach,platform}-390.png` (true 390 px via iframe wrapper; headless Brave clamps bare windows at 500 px). All inspected after the final pass, including diagram label collisions (one fixed: the re-weight label on the workflow loop).
 5. **Main untouched, nothing pushed** — all work on `signal37-rebuild-2026-07-09`; no push, no deploy, CNAME unmodified.
 6. **Placeholders enumerated** — next section.
 
@@ -101,12 +152,15 @@ No substantive claims.
 
 1. `about.html` — `[PLACEHOLDER: full team roster — confirm whether partners are named publicly and with what titles]`. v7 lists Scott King as partner/collaborator; whether that is public was not confirmable from the sources.
 
-Not placeholdered but flagged for Joshua:
-- **Tagline**: v7 open item 1 ("*the* signal — which one?") — hero uses the carried key phrases instead of a new tagline.
+Not placeholdered but flagged for Joshua (open decisions):
+- **"Ships with every engagement"** (platform + index): forward commitment vs the realignment plan's dogfood gate — confirm or soften (see platform table).
 - **Two-person build proof point**: tense/naming decision (see index table above).
 - **Pricing**: intentionally absent — v7 open item 8 says pricing architecture is undecided (and never token-denominated).
 - **"Generated, not specified" / cold-start / ladder / compression vocabulary**: deliberately excluded from the site per v7's locked layering rule (methodology layer and below only).
-- **Old pages** (`work.html`, `insight.html`, posts): not in the new nav; retire-or-reskin decision needed before ship.
+- **Old pages** (`work.html`, `insight.html`, `post.html`, `posts/`): not in the new nav; retire-or-reskin decision needed before ship. Note the legacy `posts/*.md` sources contain register-firewall vocabulary ("moat", "sell", "pipeline") that is fine for essays but should be reviewed if those pages come back.
+- **Nav label**: "Intelligence OS" chosen for the platform page (file is `platform.html`); rename to "Platform"/"The instrument" is a one-line change per page if preferred.
+- **`favicon.ico`** rebuilt from the new tile at 48/32/16; if Joshua prefers the tile border removed at 16 px, regenerate from the same scratch tile without the border.
+- **Hero runner-ups** preserved (see index table) for quick swap.
 
 ## Sources consulted but superseded
 

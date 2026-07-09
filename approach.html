@@ -7,6 +7,7 @@
     <meta name="description" content="Build batch. Hand over the loop. Stay calibrated. How a Signal 37 engagement works, and the discipline behind it.">
 
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -29,6 +30,7 @@
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="approach.html" class="active">Approach</a>
+            <a href="platform.html">Intelligence OS</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </div>
@@ -41,18 +43,41 @@
         <p class="kicker">The engagement model</p>
         <h1>Build batch. Hand over the loop. <em>Stay calibrated.</em></h1>
         <p class="lead">Every engagement follows one arc: a scoped model of your situation, a running system your team owns, and a review cadence that keeps it calibrated as reality moves.</p>
+        <div class="metachips">
+            <span class="metachip">01 &middot; Build batch</span>
+            <span class="metachip">02 &middot; Hand over the loop</span>
+            <span class="metachip">03 &middot; Stay calibrated</span>
+            <span class="metachip hot">Scoped and priced up front</span>
+        </div>
     </section>
 
-    <svg class="signal-sep" viewBox="0 0 880 48" preserveAspectRatio="none" aria-hidden="true">
-        <path stroke="var(--line)" stroke-width="1.5" fill="none" d="M10 32v-7M30 32v-5M50 32v-10M70 32v-6M90 32v-8M110 32v-4M130 32v-9M150 32v-6M170 32v-11M190 32v-5M210 32v-7M230 32v-8M250 32v-5M270 32v-10M290 32v-6M310 32v-7M330 32v-4M350 32v-9M370 32v-5M390 32v-8M410 32v-6M430 32v-10M450 32v-7M470 32v-5M490 32v-9M510 32v-6M530 32v-8M550 32v-5M570 32v-11M650 32v-7M670 32v-9M690 32v-5M710 32v-8M730 32v-6M750 32v-10M770 32v-4M790 32v-7M810 32v-9M830 32v-5M850 32v-8M870 32v-6"/>
-        <path stroke="var(--line-peak)" stroke-width="1.5" fill="none" d="M590 32 L610 4 L630 32"/>
-    </svg>
+    <div class="signal-sep" aria-hidden="true">
+        <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="8" y1="14" x2="8" y2="18" stroke="#00A36C" stroke-width="1" opacity="0.2"/>
+            <line x1="20" y1="13" x2="20" y2="18" stroke="#00A36C" stroke-width="1" opacity="0.2"/>
+            <line x1="32" y1="14" x2="32" y2="18" stroke="#00A36C" stroke-width="1" opacity="0.2"/>
+            <line x1="44" y1="13" x2="44" y2="18" stroke="#00A36C" stroke-width="1" opacity="0.2"/>
+            <line x1="56" y1="14" x2="56" y2="18" stroke="#00A36C" stroke-width="1" opacity="0.2"/>
+            <line x1="68" y1="13" x2="68" y2="18" stroke="#00A36C" stroke-width="1" opacity="0.2"/>
+            <path d="M0 16 L24 16 L28 14 L32 8 L36 4 L40 2 L44 6 L48 14 L52 16 L80 16" stroke="#00A36C" stroke-width="1.5" opacity="0.6" stroke-linecap="round" fill="none"/>
+        </svg>
+    </div>
 
     <section class="prose">
         <span class="section-label">Phase one</span>
         <h2>Build batch: the model of your situation</h2>
         <p class="lead">The intake builds a rigorous model of your organization, market, or workflow from your own data and your own people. Every claim in it traces to its source. It is a scoped, priced deliverable with fast, visible value, not a discovery phase that never ends.</p>
-        <p>The model-building front end fits the client: qualitative synthesis when the question lives in people's heads, quantitative pipelines when the time-series data exists, both when the work demands it. And not every engagement runs the full loop from day one; sometimes the model feeds a product-design cycle or a brand strategy first. But every engagement carries the loop's discipline: predictions stated up front, tracked in a ledger, scored against outcomes.</p>
+        <div class="panel-grid-2">
+            <div class="panel">
+                <p class="panel-title">Qualitative synthesis</p>
+                <p>When the question lives in people's heads. Interviews and working sessions, externalized into findings with full provenance.</p>
+            </div>
+            <div class="panel">
+                <p class="panel-title">Quantitative modeling</p>
+                <p>When the time-series data exists. Both front ends, when the work demands it.</p>
+            </div>
+        </div>
+        <p style="margin-top: var(--sp-lg);">Not every engagement runs the full loop from day one; sometimes the model feeds a product-design cycle or a brand strategy first. But every engagement carries the loop's discipline: predictions stated up front, tracked in a ledger, scored against outcomes.</p>
     </section>
 
     <section class="prose">
@@ -60,22 +85,90 @@
         <h2>Hand over the loop</h2>
         <p class="lead">The model does not ship as a report. It ships as a running system your team owns: one that states what it expects, compares expectation to outcome, and updates. Your infrastructure, your keys.</p>
         <p>That loop is what makes the infrastructure self-healing and self-learning. Every workflow we spec states what it expects before it runs, compares expectation to outcome, and updates. Small errors re-weight what the system believes; large or persistent errors send it back to rebuild the model. Failures become training signal instead of tickets, and the infrastructure gets better with use instead of decaying. That is the difference between what we spec and a static automation build.</p>
+        <figure class="diagram">
+            <svg viewBox="0 0 840 480" role="img" aria-labelledby="loop-svg-title">
+                <title id="loop-svg-title">The loop every workflow runs: sense, model, act, verify, update, and back to sense. A small error re-weights on the way back to sense; a large or persistent error goes back to rebuild the model.</title>
+                <defs>
+                    <marker id="loop-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--ink-mid)"/></marker>
+                    <marker id="loop-arr-acc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--accent-deep)"/></marker>
+                    <marker id="loop-arr-esc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--escalation)"/></marker>
+                </defs>
+
+                <!-- clockwise loop -->
+                <path d="M512 62 C600 70 680 90 710 134" stroke="var(--ink-mid)" stroke-width="1.5" fill="none" marker-end="url(#loop-arr)"/>
+                <path d="M726 222 C740 270 720 308 684 334" stroke="var(--ink-mid)" stroke-width="1.5" fill="none" marker-end="url(#loop-arr)"/>
+                <path d="M549 380 L293 380" stroke="var(--ink-mid)" stroke-width="1.5" fill="none" marker-end="url(#loop-arr)"/>
+                <path d="M118 334 C88 308 80 268 106 226" stroke="var(--ink-mid)" stroke-width="1.5" fill="none" marker-end="url(#loop-arr)"/>
+                <path d="M132 136 C162 92 240 68 322 58" stroke="var(--accent-deep)" stroke-width="1.5" fill="none" marker-end="url(#loop-arr-acc)"/>
+                <text x="316" y="44" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="var(--accent-deep)">small error &#183; re-weight</text>
+
+                <!-- the rebuild path: escalation, rationed to this one element -->
+                <path d="M214 154 C340 118 500 118 622 154" stroke="var(--escalation)" stroke-width="1.5" stroke-dasharray="5 5" fill="none" marker-end="url(#loop-arr-esc)"/>
+                <text x="420" y="152" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="var(--escalation)">large or persistent error &#183; rebuild the model</text>
+
+                <!-- nodes -->
+                <rect x="330" y="18" width="180" height="78" rx="8" fill="var(--canvas-alt)" stroke="var(--border)"/>
+                <text x="350" y="48" font-family="'Inter', sans-serif" font-weight="600" font-size="15" fill="var(--ink)">Sense</text>
+                <text x="350" y="70" font-family="'Inter', sans-serif" font-size="12" fill="var(--ink-mid)">evidence arrives</text>
+
+                <rect x="628" y="140" width="180" height="78" rx="8" fill="var(--canvas-alt)" stroke="var(--border)"/>
+                <text x="648" y="170" font-family="'Inter', sans-serif" font-weight="600" font-size="15" fill="var(--ink)">Model</text>
+                <text x="648" y="192" font-family="'Inter', sans-serif" font-size="12" fill="var(--ink-mid)">state what you expect</text>
+
+                <rect x="555" y="340" width="180" height="78" rx="8" fill="var(--canvas-alt)" stroke="var(--border)"/>
+                <text x="575" y="370" font-family="'Inter', sans-serif" font-weight="600" font-size="15" fill="var(--ink)">Act</text>
+                <text x="575" y="392" font-family="'Inter', sans-serif" font-size="12" fill="var(--ink-mid)">run the workflow</text>
+
+                <rect x="105" y="340" width="180" height="78" rx="8" fill="var(--canvas-alt)" stroke="var(--border)"/>
+                <text x="125" y="370" font-family="'Inter', sans-serif" font-weight="600" font-size="15" fill="var(--ink)">Verify</text>
+                <text x="125" y="388" font-family="'Inter', sans-serif" font-size="12" fill="var(--ink-mid)">compare expectation</text>
+                <text x="125" y="404" font-family="'Inter', sans-serif" font-size="12" fill="var(--ink-mid)">to outcome</text>
+
+                <rect x="32" y="140" width="180" height="78" rx="8" fill="var(--canvas-alt)" stroke="var(--border)"/>
+                <text x="52" y="170" font-family="'Inter', sans-serif" font-weight="600" font-size="15" fill="var(--ink)">Update</text>
+                <text x="52" y="188" font-family="'Inter', sans-serif" font-size="12" fill="var(--ink-mid)">revise what the</text>
+                <text x="52" y="204" font-family="'Inter', sans-serif" font-size="12" fill="var(--ink-mid)">system believes</text>
+
+                <text x="420" y="262" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="12" letter-spacing="1" fill="var(--ink-faint)">EVERY WORKFLOW WE SPEC RUNS THIS LOOP</text>
+            </svg>
+            <figcaption>Sense, model, act, verify, update. Small errors re-weight; large or persistent errors rebuild the model.</figcaption>
+        </figure>
         <p>We build the first working version with you, in your environment, and hand you the keys. See one, do one, teach one: we run the workflow with your team, and the protocol becomes theirs. <strong>We are done when you are capable.</strong></p>
     </section>
 
     <section class="prose">
         <span class="section-label">Phase three</span>
         <h2>Stay calibrated</h2>
-        <p class="lead">We return on a recurring review cadence, starting weekly and tuned to what your operation actually needs, to keep the model calibrated as reality moves: what did we believe, what happened, what did the surprise teach us, where does attention go next.</p>
-        <p>The review is the mental-model transfer. It is where your people learn to think with the system, and where the system earns its track record: expected versus actual, logged, reviewed, and scored.</p>
+        <p class="lead">We return on a recurring review cadence, starting weekly and tuned to what your operation actually needs, to keep the model calibrated as reality moves.</p>
+        <div class="footstrip" style="margin-top: var(--sp-lg);">
+            <span><b>01</b> what did we believe</span>
+            <span><b>02</b> what happened</span>
+            <span><b>03</b> what did the surprise teach us</span>
+            <span><b>04</b> where does attention go next</span>
+        </div>
+        <p style="margin-top: var(--sp-lg);">The review is the mental-model transfer. It is where your people learn to think with the system, and where the system earns its track record: expected versus actual, logged, reviewed, and scored.</p>
+        <p>The review runs on <a href="platform.html">Intelligence OS</a>, the instrument every engagement ships with. The model, the ledger, and the calibration history live there, in an instance you own.</p>
     </section>
 
     <section class="prose">
         <span class="section-label">The discipline</span>
         <h2>Grounded, not vibes</h2>
         <p class="lead">Every claim traces to source. Every prediction gets scored. The system learns from both.</p>
-        <p>The synthesis practice carries full provenance, referenced down to the text, and the methodology is headed for public preprints. When we say a workflow is reliable, that claim has a track record behind it, not a demo.</p>
-        <p>Grounded also means we benchmark instead of assume. We maintain a 13-model benchmark suite and run it against models as they ship, which is how we know exactly which layers of the method demand frontier models and which can run on hardware you own. When we recommend where your tokens go, that recommendation has data behind it.</p>
+        <div class="panel-grid-3">
+            <div class="panel">
+                <p class="panel-title">Provenance</p>
+                <p>The synthesis practice carries full provenance, referenced down to the text, and the methodology is headed for public preprints.</p>
+            </div>
+            <div class="panel">
+                <p class="panel-title">Scored predictions</p>
+                <p>When we say a workflow is reliable, that claim has a track record behind it: expected versus actual, logged and scored.</p>
+            </div>
+            <div class="panel">
+                <p class="panel-title">Benchmarks</p>
+                <p>A 13-model benchmark suite, re-run as models ship. It tells us which layers of the method demand frontier models and which can run on hardware you own.</p>
+            </div>
+        </div>
+        <p style="margin-top: var(--sp-lg);">When we recommend where your tokens go, that recommendation has data behind it.</p>
         <p>For technical audiences, the method grounds in a discipline they already trust: signal processing. Find the signal in noisy qualitative data; identify which structures are conserved when you move across domains. The name, the method, and the pitch language are the same thing.</p>
     </section>
 
@@ -85,6 +178,46 @@
         <p class="lead">We publish the method, the references, even the reading list. You are hiring the team that can operationalize it.</p>
         <p>The line runs through everything we make: the infrastructure is published; the skills built on top of it, the ones sculpted to a specific person, department, or organization, are the engagement. We are sculpting a solution set from the contact the system makes with your expertise, and the skill artifacts that come out are uniquely yours.</p>
         <p>Publication costs us nothing that matters: what compounds is the running instance with its accumulated calibration history. A year of your own scored predictions lives in your system, and only in yours. <strong>The playbook is open. The team is the product.</strong></p>
+        <figure class="diagram">
+            <svg viewBox="0 0 840 380" role="img" aria-labelledby="split-svg-title">
+                <title id="split-svg-title">The split between the open playbook, which is published for anyone to read, and your running instance, which holds the sculpted skills, your scored predictions, and the calibration history, in your accounts alone.</title>
+                <defs>
+                    <marker id="split-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--accent-deep)"/></marker>
+                </defs>
+
+                <!-- open playbook: published -->
+                <rect x="20" y="48" width="372" height="300" rx="8" fill="none" stroke="var(--border-strong)" stroke-dasharray="6 5"/>
+                <text x="44" y="86" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="13" letter-spacing="1" fill="var(--ink)">THE OPEN PLAYBOOK</text>
+                <text x="44" y="108" font-family="'Inter', sans-serif" font-size="12" fill="var(--ink-faint)">published, for anyone to read</text>
+                <line x1="44" y1="128" x2="368" y2="128" stroke="var(--border)"/>
+                <line x1="48" y1="152" x2="48" y2="162" stroke="var(--ink-faint)" stroke-width="1.5"/>
+                <text x="62" y="162" font-family="'Inter', sans-serif" font-size="14" fill="var(--ink-mid)">The method</text>
+                <line x1="48" y1="200" x2="48" y2="210" stroke="var(--ink-faint)" stroke-width="1.5"/>
+                <text x="62" y="210" font-family="'Inter', sans-serif" font-size="14" fill="var(--ink-mid)">The references</text>
+                <line x1="48" y1="248" x2="48" y2="258" stroke="var(--ink-faint)" stroke-width="1.5"/>
+                <text x="62" y="258" font-family="'Inter', sans-serif" font-size="14" fill="var(--ink-mid)">The reading list</text>
+                <line x1="48" y1="296" x2="48" y2="306" stroke="var(--ink-faint)" stroke-width="1.5"/>
+                <text x="62" y="306" font-family="'Inter', sans-serif" font-size="14" fill="var(--ink-mid)">The infrastructure spec</text>
+
+                <!-- the crossing -->
+                <path d="M396 198 L442 198" stroke="var(--accent-deep)" stroke-width="1.5" fill="none" marker-end="url(#split-arr)"/>
+
+                <!-- your running instance: yours alone -->
+                <rect x="448" y="48" width="372" height="300" rx="8" fill="var(--canvas-alt)" stroke="var(--accent)" stroke-width="1.5"/>
+                <text x="472" y="86" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="13" letter-spacing="1" fill="var(--accent-deep)">YOUR RUNNING INSTANCE</text>
+                <text x="472" y="108" font-family="'Inter', sans-serif" font-size="12" fill="var(--ink-faint)">deployed in your accounts, yours alone</text>
+                <line x1="472" y1="128" x2="796" y2="128" stroke="var(--border)"/>
+                <line x1="476" y1="152" x2="476" y2="162" stroke="var(--accent-deep)" stroke-width="1.5"/>
+                <text x="490" y="162" font-family="'Inter', sans-serif" font-size="14" fill="var(--ink)">Skills sculpted to your people</text>
+                <line x1="476" y1="200" x2="476" y2="210" stroke="var(--accent-deep)" stroke-width="1.5"/>
+                <text x="490" y="210" font-family="'Inter', sans-serif" font-size="14" fill="var(--ink)">Your scored predictions</text>
+                <line x1="476" y1="248" x2="476" y2="258" stroke="var(--accent-deep)" stroke-width="1.5"/>
+                <text x="490" y="258" font-family="'Inter', sans-serif" font-size="14" fill="var(--ink)">The calibration history</text>
+                <line x1="476" y1="296" x2="476" y2="306" stroke="var(--accent-deep)" stroke-width="1.5"/>
+                <text x="490" y="306" font-family="'Inter', sans-serif" font-size="14" fill="var(--ink)">Your keys, your data</text>
+            </svg>
+            <figcaption>The method is published. What it produces in contact with your organization stays yours: the sculpted skills and the calibration history live in your running instance.</figcaption>
+        </figure>
     </section>
 
     <section class="prose">
@@ -92,11 +225,14 @@
         <h2>&ldquo;Why don&rsquo;t I just adopt your processes instead of paying you to adapt to mine?&rdquo;</h2>
         <p class="lead">It is the right question. It killed the ERP integrators&rsquo; pricing power, and it deserves a straight answer.</p>
         <p>A general-ledger close is standard: it belongs to no one&rsquo;s mental model, everyone schools on the same process, so adopting the tool&rsquo;s process works. AI scaffolding today is different in kind. What the system amplifies is how your people and your organization actually think: how they describe work, decide what to trust, hand things off. There is no standard mental model to adopt yet. Until there is, adapting the scaffolding to yours <strong>is</strong> the work.</p>
-        <p>We hold this answer honestly: it has an expiry. When mental models standardize, this business changes. We will say so then, too.</p>
+        <div class="callout">
+            <p><strong>We hold this answer honestly: it has an expiry.</strong> When mental models standardize, this business changes. We will say so then, too.</p>
+        </div>
         <p>The same honesty runs through the engagement itself. You get the principals; the system does the leverage work. You keep everything we build for you. And yes, working with clients sharpens our method; each engagement is instrumented, and what we learn generalizes into the starting kit for the next client.</p>
     </section>
 
-    <section>
+    <section class="cta-dark">
+        <span class="section-label">The first move</span>
         <h2>Start with the build batch</h2>
         <p class="lead" style="margin: var(--sp-md) 0 var(--sp-lg); max-width: 640px;">A scoped model of your situation, priced up front, with every claim traced to its source.</p>
         <a class="btn btn-primary" href="contact.html">Contact us</a>
@@ -110,6 +246,7 @@
         <div class="foot-links">
             <a href="index.html">Home</a>
             <a href="approach.html">Approach</a>
+            <a href="platform.html">Intelligence OS</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </div>
