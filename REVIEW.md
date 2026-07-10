@@ -185,3 +185,6 @@ Joshua's call: the instrument is part of the approach and does not deserve its o
 - `approach.html` gains an `#instrument` section inside the engagement narrative (after Stay calibrated): the made-visible framing, three metachips, and the assumptions/workstreams/outcomes model diagram carried over from the old page.
 - Home teaser keeps the section, drops the product name ("The engagement, made visible"), CTA now deep-links to `approach.html#instrument`.
 - Copy note: the folded section says the review "runs on a living model" — this sidesteps the old "ships with every engagement" forward-commitment question (open decision 1), which is now moot along with the nav-label question (old decision 2).
+
+## Rev 2026-07-10 (third): first beat renamed
+"Build batch" -> "Build the model" everywhere (Joshua: batch is builder-speak, means nothing to a buyer). Arc now: Build the model. Hand over the loop. Stay calibrated. Verb-article-noun across all three beats; the v7 references above are historical.
