@@ -564,3 +564,84 @@ main.wrap > *:nth-child(n+6) { animation-delay: 0.45s; }
 
 /* team roles (2026-07-09) */
 .panel-role { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-deep); margin: 2px 0 8px; }
+
+/* ---------- Insight index: article cards (2026-07-10) ---------- */
+.article-list { display: flex; flex-direction: column; gap: var(--sp-md); margin-top: var(--sp-lg); }
+.article-card {
+  display: block;
+  background: var(--canvas-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: var(--sp-lg);
+  transition: border-color 0.15s linear, transform 0.15s ease, box-shadow 0.15s ease;
+}
+main a.article-card { color: inherit; text-decoration: none; }
+.article-card:hover { border-color: var(--border-strong); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.article-card .article-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: var(--sp-sm);
+}
+.article-card h3 { font-size: 1.0625rem; margin-bottom: var(--sp-xs); color: var(--ink); }
+.article-card .article-dek { font-size: 0.9rem; line-height: 1.6; color: var(--ink-mid); }
+/* Featured (newest) card */
+.article-card.featured { border-color: var(--border-strong); box-shadow: var(--shadow-sm); padding: var(--sp-xl) var(--sp-lg); }
+.article-card.featured .article-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--accent-bg);
+  margin-bottom: var(--sp-md);
+}
+.article-card.featured h3 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 3.2vw, 2.125rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  transform: scaleX(var(--display-stretch));
+  transform-origin: left top;
+  width: calc(100% / var(--display-stretch));
+  margin-bottom: var(--sp-sm);
+}
+.article-card.featured .article-dek { font-size: 1.0625rem; line-height: 1.7; }
+
+/* ---------- Article prose extras (2026-07-10) ---------- */
+.prose figure.post-image { margin: var(--sp-xl) 0; }
+.prose figure.post-image img { border: 1px solid var(--border); border-radius: var(--radius-lg); }
+.prose figure.post-image figcaption {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--ink-faint);
+  margin-top: var(--sp-sm);
+}
+.prose hr { border: none; border-top: 1px solid var(--border); margin: var(--sp-xl) 0; }
+.prose code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  background: var(--raised);
+  padding: 0.12em 0.4em;
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+}
+.prose ul { list-style: disc; }
+.prose ol { list-style: decimal; }
+.article-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent-deep);
+  margin-bottom: var(--sp-lg);
+}
