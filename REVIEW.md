@@ -177,3 +177,11 @@ python3 -m http.server 8037
 # open http://localhost:8037/
 ```
 (or open the files directly via file://; 404.html needs the http server to pick up /styles.css)
+
+## Rev 2026-07-10 (second): Intelligence OS dissolved into Approach
+
+Joshua's call: the instrument is part of the approach and does not deserve its own section. Changes:
+- `platform.html` removed; nav item gone from all 13 pages; sitemap updated.
+- `approach.html` gains an `#instrument` section inside the engagement narrative (after Stay calibrated): the made-visible framing, three metachips, and the assumptions/workstreams/outcomes model diagram carried over from the old page.
+- Home teaser keeps the section, drops the product name ("The engagement, made visible"), CTA now deep-links to `approach.html#instrument`.
+- Copy note: the folded section says the review "runs on a living model" — this sidesteps the old "ships with every engagement" forward-commitment question (open decision 1), which is now moot along with the nav-label question (old decision 2).
