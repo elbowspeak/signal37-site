@@ -196,7 +196,6 @@ nav.site {
   left: 0;
   right: 0;
   overflow: hidden;
-  opacity: 0.55;
   pointer-events: none;
 }
 .hero-motif svg { width: 100%; height: auto; display: block; }
