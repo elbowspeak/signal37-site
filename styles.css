@@ -188,7 +188,7 @@ nav.site {
 }
 
 /* ---------- Hero ---------- */
-.hero { padding: var(--sp-3xl) 0 var(--sp-2xl); position: relative; }
+.hero { padding: var(--sp-3xl) 0 calc(var(--sp-2xl) + 64px); position: relative; }
 /* Hero motif: the signal drawing in behind the copy (components page, approved treatment) */
 .hero-motif {
   position: absolute;

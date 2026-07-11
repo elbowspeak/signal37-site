@@ -191,3 +191,8 @@ Joshua's call: the instrument is part of the approach and does not deserve its o
 
 ## Register rule (Joshua, 2026-07-10): arc diagram speaks client-value only
 The engagement-arc loop nodes describe WHAT THE CLIENT GETS per phase — never commercial terms. "At a fixed price, agreed first" was removed from node 01 (now "every claim traced to its source"). Pricing language lives in prose (approach phase-one paragraph, contact chip), nowhere else.
+
+## Motif corrections (Joshua review, 2026-07-10 evening)
+- Trace underline (M5) REMOVED from the site: preserveAspectRatio=none across a wrapped inline span renders as a thick bar at wide viewports and orphans trailing punctuation. If M5 returns, it needs a fixed-width nowrap target and multi-viewport verification.
+- Rise separator removed from index hero exit: redundant with the hero's own motif (two visuals, nothing between).
+- Hero motif was ALWAYS overlapping the CTA buttons — invisible at 0.18 opacity, exposed by the perception-floor raise. Hero bottom padding +64px gives it a clear band. General lesson: raising opacity on latent motifs requires re-auditing layout collisions they were hiding.
