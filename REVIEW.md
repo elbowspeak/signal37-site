@@ -188,3 +188,6 @@ Joshua's call: the instrument is part of the approach and does not deserve its o
 
 ## Rev 2026-07-10 (third): first beat renamed
 "Build batch" -> "Build the model" everywhere (Joshua: batch is builder-speak, means nothing to a buyer). Arc now: Build the model. Hand over the loop. Stay calibrated. Verb-article-noun across all three beats; the v7 references above are historical.
+
+## Register rule (Joshua, 2026-07-10): arc diagram speaks client-value only
+The engagement-arc loop nodes describe WHAT THE CLIENT GETS per phase — never commercial terms. "At a fixed price, agreed first" was removed from node 01 (now "every claim traced to its source"). Pricing language lives in prose (approach phase-one paragraph, contact chip), nowhere else.
