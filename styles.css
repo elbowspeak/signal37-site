@@ -278,6 +278,11 @@ nav.site {
   color: var(--ink-faint);
   margin: 0 0 var(--sp-sm);
 }
+.panel .fine {
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  margin: var(--sp-sm) 0 0;
+}
 .panel-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-md); margin-top: var(--sp-lg); }
 .panel-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--sp-md); margin-top: var(--sp-lg); }
 @media (max-width: 720px) {
