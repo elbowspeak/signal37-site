@@ -665,3 +665,15 @@ main a.article-card { color: inherit; text-decoration: none; }
 .threshold-callout .edge { flex: 0 0 44px; background: var(--escalation-bg); display: flex; align-items: center; justify-content: center; }
 .threshold-callout .body { padding: 20px 24px; }
 .threshold-callout .body .t { font-weight: 600; margin-bottom: 4px; }
+
+/* ---------- Brand mark (signal-from-noise lockup, 2026-07-17) ---------- */
+.brand { display: inline-flex; align-items: center; gap: 0.55rem; text-decoration: none; }
+.brandmark { height: 17px; width: auto; display: block; flex: none; }
+footer.site .wrap { align-items: center; }
+.brand-lockup { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; }
+.footmark { height: 20px; width: auto; display: block; }
+.brand-lockup .tagline {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.6875rem; letter-spacing: 0.16em; text-transform: lowercase;
+  color: var(--ink-faint); margin: 0;
+}
