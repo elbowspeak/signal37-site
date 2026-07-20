@@ -146,10 +146,10 @@ header.site {
 nav.site {
   max-width: 880px;
   margin: 0 auto;
-  padding: var(--sp-lg);
+  padding: calc(var(--sp-lg) * 0.85) var(--sp-lg);
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   gap: var(--sp-lg);
 }
 .wordmark {
@@ -667,8 +667,9 @@ main a.article-card { color: inherit; text-decoration: none; }
 .threshold-callout .body .t { font-weight: 600; margin-bottom: 4px; }
 
 /* ---------- Brand mark (signal-from-noise lockup, 2026-07-17) ---------- */
-.brand { display: inline-flex; align-items: center; gap: 0.55rem; text-decoration: none; }
-.brandmark { height: 17px; width: auto; display: block; flex: none; }
+.brand { display: inline-flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; }
+.brand .wordmark { transform-origin: center center; }
+.brandmark { width: 100%; height: 17px; display: block; transform: scaleX(var(--display-stretch)); transform-origin: center center; }
 footer.site .wrap { align-items: center; }
 .brand-lockup { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; }
 .footmark { height: 20px; width: auto; display: block; }
