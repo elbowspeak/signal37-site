@@ -108,7 +108,10 @@
     <section>
         <span class="section-label">Send a note</span>
         <h2>What are you trying to achieve?</h2>
-        <form class="contact-form" action="https://formspree.io/f/xgolykdg" method="POST">
+        <!-- Formspree endpoint: replace YOUR_FORM_ID with the real form ID from the Formspree dashboard. The form is otherwise fully wired (honeypot + subject) and ready to go live on ID swap. -->
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="hidden" name="_subject" value="New inquiry — s37.ai contact form">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required placeholder="Your name">
