@@ -548,6 +548,8 @@ figure.diagram figcaption {
 .prose h3 { margin-top: var(--sp-xl); }
 .prose ul, .prose ol { padding-left: 1.25rem; color: var(--ink-mid); }
 .prose li + li { margin-top: var(--sp-sm); }
+.copy-list { list-style: disc; padding-left: 1.25rem; color: var(--ink-mid); max-width: 660px; }
+.copy-list li + li { margin-top: var(--sp-sm); }
 
 /* ---------- Footer ---------- */
 footer.site {
