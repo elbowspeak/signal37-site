@@ -438,6 +438,48 @@ nav.site {
 }
 .footstrip b { color: var(--ink-mid); font-weight: 600; }
 
+/* Review-loop: the recurring-review cadence as a connected step flow */
+.review-loop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--sp-sm);
+  margin-top: var(--sp-lg);
+}
+.review-step {
+  flex: 1 1 170px;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius-md);
+  background: var(--canvas-alt);
+  box-shadow: var(--shadow-sm);
+  padding: var(--sp-md);
+}
+.review-step .review-n {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: var(--accent-deep);
+}
+.review-step p {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+.review-arrow {
+  display: flex;
+  align-items: center;
+  color: var(--ink-faint);
+  font-size: 1.15rem;
+  flex: 0 0 auto;
+}
+@media (max-width: 720px) {
+  .review-arrow { display: none; }
+  .review-step { flex-basis: calc(50% - var(--sp-sm)); }
+}
+
 /* ---------- Dark CTA surface (contained close moment, components page) ---------- */
 .cta-dark {
   background: var(--dark-bg);
